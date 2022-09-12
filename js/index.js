@@ -1,9 +1,7 @@
 // Modal Image Gallery
 function onClick(element) {
-    document.getElementById("img01").src = element.src;
+    document.getElementById("img01").innerHTML = "<object data='https://goformusic.github.io/codelabs/' width='800px' height='600px' style='overflow:auto;border:5px ridge red;' />";
     document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = $("#mydiv").html('<object data="http://your-website-domain"/>');
 
   }
   
