@@ -1,8 +1,9 @@
 // Modal Image Gallery
-function onClick(element) {
-    document.getElementById("img01").innerHTML = "<object data='https://goformusic.github.io/codelabs/' width='800px' height='600px' style='overflow:auto;border:5px ridge red;' />";
+function onClick(element, link) {
+    document.getElementById("img01").innerHTML = "<object data="+link+" width='800px' height='600px' style='overflow:auto;border:5px ridge red;' />";
     document.getElementById("modal01").style.display = "block";
-
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
   }
   
   // Change style of navbar on scroll
