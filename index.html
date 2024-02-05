@@ -11,147 +11,44 @@
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-dark-grey w3-hide w3-hide-large w3-hide-medium w3-dark-grey">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
-</div>
-
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> BLOG</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">ADRIAN'S BLOG</span>
   </div>
-</div>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love coding and gaming</em></p>
-  <p>I've create this blog for showing all my works so far and what I've learn working in Romania/America and now in Denmark</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large w3-dark-grey">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Adrian-Cristian Militaru</b></p><br>
-      <img src="./resources/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-    </div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website.I will show all the details and part of my work during the starting in this amazing field of web and gamedev.</p>
-    </div>
-  </div>
-  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-  <p class="w3-wide"><i class="fa fa-circle"></i>Python</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%">70%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>Java</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%">70%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>C++</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>C#</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%">70%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>Unreal Engine 4</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>Unity 3D</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:70%">70%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>MySQL</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>PHP</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>SAML 2.0</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>SCIM</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>REST API</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-circle"></i>OpenID</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
-</div>
-
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">10+</span><br>
-    Partners
-  </div>
-  <div class="w3-half w3-section">
-    <span class="w3-xlarge">10+</span><br>
-    Projects
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">50+</span><br>
-    Meetings
-  </div>
-</div>
-
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">CODE LABS & RESOURCES</span>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest work projects.<br> Click on the images to make them bigger</em></p><br>
-
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="./resources/p1.jpg" style="width:100%" onclick="onClick(this,'https://goformusic.github.io/codelabs/AND1')" class="w3-hover-opacity" alt="Android codelabs">
-    </div>
-    <div class="w3-col m3">
-      <img src="./resources/p2.jpg" style="width:100%" onclick="onClick(this,'https://goformusic.github.io/codelabs/DNP1')" class="w3-hover-opacity" alt="DNP1 - C# codelabs">
-    </div>
-    <div class="w3-col m3">
-      <img src="./resources/p3.jpg" style="width:100%" onclick="onClick(this,'https://goformusic.github.io/codelabs/DSB1')" class="w3-hover-opacity" alt="DSB - database codelabs">
-    </div>
-    <div class="w3-col m3">
-      <img src="./resources/p4.jpg" style="width:100%" onclick="onClick(this,'https://goformusic.github.io/IoT_VIA_module/')" class="w3-hover-opacity" alt="IoT - C IoT VIA module">
-    </div>
-    <div class="w3-col m3">
-      <img src="./resources/p4.jpg" style="width:100%" onclick="onClick(this,'https://goformusic.github.io/unity-editor-icons/')" class="w3-hover-opacity" alt="IoT - C IoT VIA module">
+  <div class="w3-display-middle" style="padding-top: 40%;">
+    <div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">
+      <div class="w3-row-padding">
+        <div class="w3-col m3 img-container">
+          <img class="w3-hover-opacity" alt="Android codelabs">
+          <div class="img_overlay" onclick="onClick(this,'https://goformusic.github.io/codelabs/AND1')">Android codelabs</div>
+        </div>
+        <div class="w3-col m3 img-container">
+          <img class="w3-hover-opacity" alt="DNP1 - C# codelabs">
+          <div class="img_overlay" onclick="onClick(this,'https://goformusic.github.io/codelabs/DNP1')">DNP1 - C# codelabs</div>
+        </div>
+        <div class="w3-col m3 img-container">
+          <img class="w3-hover-opacity" alt="DSB - database codelabs">
+          <div class="img_overlay" onclick="onClick(this,'https://goformusic.github.io/codelabs/DSB1')">DSB - database codelabs</div>
+        </div>
+        <div class="w3-col m3 img-container">
+          <img class="w3-hover-opacity" alt="IoT - C IoT VIA module">
+          <div class="img_overlay" onclick="onClick(this,'https://goformusic.github.io/IoT_VIA_module/')">IoT - C IoT VIA module</div>
+        </div>
+        <div class="w3-col m3 img-container">
+          <img class="w3-hover-opacity" alt="Unity Editor Icons">
+          <div class="img_overlay" onclick="onClick(this,'https://goformusic.github.io/unity-editor-icons/')">Unity Editor Icons</div>
+        </div>
+        <div class="w3-col m3 img-container">
+          <img class="w3-hover-opacity" alt="DIM1">
+          <div class="img_overlay" onclick="onClick(this,'https://goformusic.github.io/DIM1')">DIM1</div>
+        </div>
+        <div class="w3-col m3 img-container">
+          <img class="w3-hover-opacity" alt="GMD1">
+          <div class="img_overlay" onclick="onClick(this,'https://goformusic.github.io/GMD1')">GMD1</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -166,56 +63,10 @@
   </div>
 </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64 w3-dark-grey" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <img src="./resources/map.jpg" class="w3-image w3-round" style="width:100%">
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </div>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a> and modified by Adrian-Cristian Militaru</p>
