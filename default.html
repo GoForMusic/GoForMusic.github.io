@@ -1,26 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Adrian's Templates</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="./css/index.css">
+  <title>Adrian's Templates - Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- IMPORTANT: nu mai folosi w3.css aici -->
+  <link rel="stylesheet" href="./css/default.css" />
 </head>
+
 <body>
+  <!-- Top marquee -->
+  <div class="marquee">
+    <div class="marquee__inner">
+      ✨ Welcome to Adrian's Portal ✨ Best viewed in Internet Explorer 6 ✨ 1024x768 recommended ✨
+    </div>
+  </div>
 
-    <div class="background-image">
-        <div class="shader-overlay"></div>
-        <!-- Your content here -->
-        <div class="w3-content w3-padding-64">
-            <h1 class="w3-center w3-text-white">Welcome to Adrian's Blog</h1>
-            <p class="w3-center w3-text-white">All my stuff from VIA and personal projects</p>
+  <div class="page">
+    <header class="hero">
+      <h1>Welcome to Adrian's Blog</h1>
+      <p class="tagline">All my stuff from VIA and personal projects</p>
+
+      <div class="bootline" id="bootline"></div>
+
+      <div class="cta-row">
+        <button id="clickHereBtn" class="cta blink">CLICK HERE!!!</button>
+        <button id="openPopupBtn" class="cta secondary">Open Cool Pop-up</button>
+      </div>
+
+      <div class="meta">
+        <span class="badge">Status: <b class="ok">ONLINE</b></span>
+        <span class="badge">Connection: <b>56k modem</b></span>
+        <span class="badge">Visitor #: <b id="visitorCount">000001</b></span>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h2>⭐ Featured</h2>
+        <ul>
+          <li>My VIA Codelabs</li>
+          <li>SEP projects on GitHub</li>
+          <li>Random tools & resources</li>
+        </ul>
+        <p class="hint">Tip: try clicking around for sparkles ✨</p>
+      </div>
+
+      <div class="card">
+        <h2>📌 Notice Board</h2>
+        <div class="note">
+          <div class="note-title">Latest update</div>
+          <div class="note-body">
+            Added: XP night theme + snow overlay ❄️
+          </div>
         </div>
-    </div>
 
-    <div class="footer">
-        <p>&copy; 2024 Adrian-Cristian Militaru. All rights reserved.</p>
-    </div>
+        <div class="note">
+          <div class="note-title">Todo</div>
+          <div class="note-body">
+            Add Start menu, sounds, and fake dial-up connect.
+          </div>
+        </div>
+      </div>
 
+      <div class="card">
+        <h2>💾 Download Center</h2>
+        <p>Totally legit downloads:</p>
+        <div class="downloads">
+          <button class="dl" data-fake="WinAmp_Skin.exe">WinAmp_Skin.exe</button>
+          <button class="dl" data-fake="CoolToolbarInstaller.exe">CoolToolbarInstaller.exe</button>
+          <button class="dl" data-fake="FREE_RAM_BOOSTER_2004.exe">FREE_RAM_BOOSTER_2004.exe</button>
+        </div>
+        <p class="tiny">(don’t worry, they’re fake 😄)</p>
+      </div>
+    </section>
+
+    <footer class="statusbar">
+      <span>© 2026 Adrian-Cristian Militaru. All rights reserved.</span>
+      <span id="clock"></span>
+    </footer>
+  </div>
+
+  <!-- Fake popup window -->
+  <div id="popup" class="popup hidden" role="dialog" aria-modal="true">
+    <div class="popup-titlebar" id="popupTitle">
+      <span>Totally Important Message</span>
+      <button id="popupClose" class="x">✖</button>
+    </div>
+    <div class="popup-body">
+      <p><b>Congratulations!</b> You are the 1,000,000th visitor! 🥳</p>
+      <p>Click “OK” to continue…</p>
+      <div class="popup-actions">
+        <button id="popupOk" class="cta">OK</button>
+        <button id="popupCancel" class="cta secondary">Cancel</button>
+      </div>
+      <p class="tiny">*This is a joke. Please don’t install toolbars 😅</p>
+    </div>
+  </div>
+
+  <script src="../js/default_page.js"></script>
 </body>
 </html>
