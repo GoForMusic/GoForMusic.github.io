@@ -26,7 +26,7 @@ function onClick(element) {
 
   // Load page
   iframe.style.display = "none";
-  iframe.src = url;
+  iframe.src = url + "?v=" + Date.now();
 
   iframe.onload = function () {
     clearInterval(interval);
@@ -48,7 +48,7 @@ window.onload = function () {
 
   // Set default URL
   document.getElementById("ie-url").textContent = defaultUrl;
-  iframe.src = defaultUrl;
+  iframe.src = defaultUrl + "?v=" + Date.now();
 };
 
 function closeIE() {
