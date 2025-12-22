@@ -1,119 +1,223 @@
-
-/* Styles for the loading screen */
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Make sure it's on top */
-}
-
-.lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-}
-
-.lds-ring div {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border: 8px solid #ccc;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #ccc transparent transparent transparent;
 }
 
-.lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
+/* =====================
+   BASE
+   ===================== */
+
+body {
+    margin: 0;
+
+    /* Win98 dark blue */
+    background-color: #000080;
+
+    /* Retro noise / stars */
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+    /* Classic fonts */
+    font-family: "Comic Sans MS", Tahoma, Verdana, Arial, sans-serif;
+
+    /* Neon-ish retro text */
+    color: #cfe8ff;
+
+    overflow: hidden;
+}
+/* =====================
+   NAVBAR (XP TOOLBAR)
+   ===================== */
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    background: linear-gradient(#0b1c3d, #07142e);
+    border-bottom: 1px solid #1e3a6d;
 }
 
-.lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
+.navbar a,
+.navbar button {
+    background: linear-gradient(#1b2f5f, #0f1f3f);
+    border: 1px solid #2a4f8a;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 13px;
+    color: #cfe8ff;
+    white-space: nowrap;
 }
 
-.lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
+.navbar a:hover,
+.navbar button:hover {
+    background: linear-gradient(#2a4f8a, #1b3a6d);
+    color: #ffffff;
 }
 
-@keyframes lds-ring {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+/* =====================
+   DROPDOWNS (XP MENU)
+   ===================== */
+
+.w3-dropdown-hover {
+    position: relative;
 }
 
-#iframe-container {
-    display: none; /* Initially hide the iframe */
-}
-
-#error-message {
+.w3-dropdown-content {
     display: none;
-    color: red;
-    font-size: 18px;
-    margin-top: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f2f8ff;
+    border: 1px solid #7aaed6;
+    border-radius: 6px;
+    min-width: 220px;
+    z-index: 100;
 }
 
-/* Styles for the iframe */
+.w3-dropdown-hover:hover .w3-dropdown-content {
+    display: block;
+}
+
+.w3-dropdown-content a {
+    display: block;
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+.w3-dropdown-content a:hover {
+    background: #d6ebff;
+}
+
+/* =====================
+   CONTENT PANEL (XP PAGE)
+   ===================== */
+
 #iframe-container {
-    position: fixed;
-    top: 35px; /* Height of the navbar */
-    left: 0;
-    width: 100%;
-    height: 95vh; /* Subtract height of navbar from viewport height */
-    z-index: 0; /* Ensure the iframe is behind the navbar */
+    flex: 1;
+    background: linear-gradient(#1b3f7a, #0f2a55);
+    padding: 8px;          /* dacă vrei padding */
+    overflow: hidden;     /* IMPORTANT */
 }
 
 #iframe-container iframe {
     width: 100%;
     height: 100%;
-    border: none; /* Remove iframe border */
+    border: none;
+    display: block;       /* IMPORTANT */
 }
 
-.navbar{ /* Adjust top and bottom padding */
-    display: flex; /* Use flexbox layout */
-    justify-content: center; /* Center the navbar items horizontally */
+/* =====================
+   LOADING SCREEN
+   ===================== */
+
+.lds-ring div {
+    border: 8px solid #3fa9f5;
+    border-color: #3fa9f5 transparent transparent transparent;
 }
 
-/* Styles for the background image shader effect */
-.background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* =====================
+   INTERNET EXPLORER XP WINDOW
+   ===================== */
+
+#ie-window {
+    position: relative;
+    width: 96%;
+    height: calc(100vh - 60px); /* navbar height */
+    margin: 0 auto;             /* FĂRĂ margin-top */
+    background: linear-gradient(#1b3f7a, #0f2a55);
+    color: #ffffff;
+    border: 1px solid #2a4f8a;
+    border-bottom: 1px solid #2a4f8a;
+    box-shadow: 0 0 18px rgba(0,0,0,0.7);
+}
+
+/* Title bar */
+#ie-titlebar {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    background: linear-gradient(#316ac5, #1f3f82);
+    color: white;
+    font-weight: bold;
+}
+
+/* Close button */
+#ie-close {
+    background: #c94a4a;
+    border: 1px solid #ffaaaa;
+    border-radius: 4px;
+    width: 26px;
+    height: 22px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Toolbar */
+#ie-toolbar {
+    height: 28px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(#0f1f3f, #09162e);
+    color: #9ecbff;
+    border-bottom: 1px solid #2a4f8a;
+    font-size: 12px;
+}
+
+/* URL label */
+#ie-url {
+    font-family: "Courier New", monospace;
+    color: #cfe8ff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* override only height logic */
+#ie-window #iframe-container {
+    margin: 0;
     width: 100%;
+    height: calc(100% - 60px);
+    border-radius: 0;
+}
+
+/* =====================
+   IE LOADING (XP STYLE)
+   ===================== */
+
+#ie-loading {
+    padding: 8px;
+    background: #060d22;
+    color: #9ecbff;
+    border-bottom: 1px solid #2a4f8a;
+}
+
+#ie-loading-text {
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: white;
+}
+
+/* progress container */
+#ie-progress {
+    height: 14px;
+    background: #0a1533;
+    border: 1px solid #2a4f8a;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+/* progress bar */
+#ie-progress-bar {
     height: 100%;
-    background-image: url('../resources/backgrounds/parallax1.jpg'); /* Replace 'your-background-image.jpg' with your image path */
-    background-size: cover;
-    background-position: center;
-}
-
-.shader-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-}
-
-/* Styles for the footer */
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #333; /* Footer background color */
-    color: white; /* Footer text color */
-    text-align: center;
-    padding: 10px 0; /* Adjust padding as needed */
+    width: 0%;
+    background: linear-gradient(90deg, #3fa9f5, #00cfff);
+    transition: width 0.2s linear;
 }

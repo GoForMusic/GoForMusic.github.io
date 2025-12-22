@@ -4,8 +4,8 @@
 <title>Adrian's Templates</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="./css/snow.css">
 </head>
 <body>
 
@@ -48,19 +48,32 @@
   </div>
 </div>
 
-<div id="loading-screen">
-  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-</div>
-
-
 <!-- Main content -->
-<div id="iframe-container">
-  <iframe id="courseIframe"></iframe>
-</div>
+<div id="ie-window">
+  <div id="ie-titlebar">
+    <span>Internet Explorer</span>
+    <button id="ie-close" onclick="closeIE()">✖</button>
+  </div>
 
-<div id="error-message">Failed to load content. Please try again later.</div>
+  <div id="ie-toolbar">
+    Address:
+    <span id="ie-url">about:blank</span>
+  </div>
+
+  <div id="ie-loading" class="hidden">
+    <div id="ie-loading-text">Connecting...</div>
+    <div id="ie-progress">
+      <div id="ie-progress-bar"></div>
+    </div>
+  </div>
+
+  <div id="iframe-container">
+    <iframe id="courseIframe"></iframe>
+  </div>
+</div>
 
 <script src="../js/index.js"></script>
+<script src="../js/snow.js"></script>
 
 </body>
 </html>
