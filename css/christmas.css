@@ -1,0 +1,44 @@
+#christmas-lights {
+  position: absolute;
+  top: 38px; /* sub titlebar */
+  left: 0;
+  right: 0;
+  height: 32px;
+  background: url("../resources/christmas/lights.png") repeat-x;
+  animation: blink 1.2s infinite steps(2);
+  z-index: 5;
+}
+
+@keyframes blink {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.4); }
+}
+
+.hidden {
+  display: none;
+}
+
+
+#santa {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+
+  left: -100px; /* începe OFFSCREEN */
+  top: -100px;
+
+  image-rendering: pixelated;
+  z-index: 50;
+
+  transition: none; /* DEFAULT: fără mișcare */
+}
+
+#santa.walking {
+  transition:
+    left 5s linear,
+    top 5s linear;
+}
+
+#santa.flip {
+  transform: scaleX(-1);
+}
